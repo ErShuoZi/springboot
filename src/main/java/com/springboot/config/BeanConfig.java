@@ -2,8 +2,10 @@ package com.springboot.config;
 
 import com.springboot.bean.Cat;
 import com.springboot.bean.Dog;
+import com.springboot.bean.Furn;
 import com.springboot.bean.Monster;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -33,6 +35,9 @@ import org.springframework.context.annotation.Scope;
  * 通过@Import的方式注入了组件，默认组件id就是对应的类型的全类名
  */
 
+
+//注入Furn
+@EnableConfigurationProperties(Furn.class)
 @Import(value = {Dog.class, Cat.class})
 @Configuration
 public class BeanConfig {

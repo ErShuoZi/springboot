@@ -67,8 +67,8 @@ public class MainApp {
 //        System.out.println(dog);
 
 
-        Monster monster03 = ioc.getBean("monster03", Monster.class);
-        System.out.println("monster03--" + monster03);
+//        Monster monster03 = ioc.getBean("monster03", Monster.class);
+//        System.out.println("monster03--" + monster03);
 
     }
 }
