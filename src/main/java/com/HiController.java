@@ -14,7 +14,6 @@ public class HiController {
     @RequestMapping("/hi")
     @ResponseBody
     public String hi(){
-
         return "hi ~" + website;
     }
 }
