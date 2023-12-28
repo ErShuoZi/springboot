@@ -1,6 +1,8 @@
 package com.springboot;
 
 import com.springboot.bean.A;
+import com.springboot.bean.Cat;
+import com.springboot.bean.Dog;
 import com.springboot.bean.Monster;
 import com.springboot.config.BeanConfig;
 import org.springframework.boot.SpringApplication;
@@ -52,8 +54,14 @@ public class MainApp {
 //        System.out.println("monster_02--" + monster02+ " " + monster02.hashCode());
 
 //        测试可以有多个配置类
-        Monster monster02 = ioc.getBean("monster02", Monster.class);
-        System.out.println("monster02 =" + monster02 );
+//        Monster monster02 = ioc.getBean("monster02", Monster.class);
+//        System.out.println("monster02 =" + monster02 );
+
+
+        Dog dog = ioc.getBean(Dog.class);
+        Cat cat = ioc.getBean(Cat.class);
+        System.out.println("dogBean--" + dog);
+        System.out.println("catBean--" + cat);
 
     }
 }

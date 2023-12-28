@@ -1,8 +1,11 @@
 package com.springboot.config;
 
+import com.springboot.bean.Cat;
+import com.springboot.bean.Dog;
 import com.springboot.bean.Monster;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Scope;
 
 /**
@@ -19,6 +22,17 @@ import org.springframework.context.annotation.Scope;
  *  (4) 如何选择: 组件依赖必须使用 Full 模式默认。如果不需要组件依赖使用 Lite 模 * (5) Lite 模 也称为轻量级模式，因为不检测依赖关系，运行速度快
  *
  */
+
+/**
+ * @Import(value = {Dog.class, Cat.class}):
+ * public @interface Import {
+ *     Class<?>[] value();
+ * }
+ * 可以指定一个Class的数组，可以注入指定类型的bean对象
+ * 通过@Import的方式注入了组件，默认组件id就是对应的类型的全类名
+ */
+
+@Import(value = {Dog.class, Cat.class})
 @Configuration
 public class BeanConfig {
     /**

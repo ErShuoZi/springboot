@@ -4,14 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c759a9c-6937-4473-93c4-622efb276183" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Monster.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig02.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/beans.xml" afterDir="false" />
+    <list default="true" id="0c759a9c-6937-4473-93c4-622efb276183" name="Changes" comment="@Configuration注解">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Cat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/bean/Dog.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/HiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/HiController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703727975102</updated>
       <workItem from="1703727976205" duration="15091000" />
-      <workItem from="1703746211148" duration="878000" />
+      <workItem from="1703746211148" duration="1556000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1703740553666</created>
@@ -107,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703740553666</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="@Configuration注解">
+      <created>1703747117074</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1703747117074</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,6 +120,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="@Configuration注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="@Configuration注解" />
   </component>
 </project>
