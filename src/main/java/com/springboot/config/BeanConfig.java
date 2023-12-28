@@ -3,6 +3,7 @@ package com.springboot.config;
 import com.springboot.bean.Cat;
 import com.springboot.bean.Dog;
 import com.springboot.bean.Monster;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
@@ -42,10 +43,23 @@ public class BeanConfig {
      * 4.new Monster(200,"牛魔王",500,"疯魔拳") 容器中的bean具体信息
      * 5. @Bean(name="monster_nmw") 在配置、注入bean指定名字，如果不指定，则以方法名作为bean的名字
      */
-//    @Bean(name="monster_nmw")
-    @Bean
+    @Bean(name="monster_nmw")
+//    @Bean
 //    @Scope("prototype") //多例
     public Monster monster01() {
         return new Monster(200,"牛魔王",500,"疯魔拳");
+    }
+
+    /**
+     *    @ConditionalOnBean(name = "monster_nmw")
+     *    当容器中有一个id为monster_nmw 的bean时，就注入，否则则不
+     *     @ConditionalOnBean(name = "monster_nmw")也可以放在配置类上
+     *     即表示对该配置类所有要注入的组件都进行条件约束
+     * @return
+     */
+    @Bean
+    @ConditionalOnBean(name = "monster_nmw")
+    public Dog dog01(){
+        return new Dog();
     }
 }
