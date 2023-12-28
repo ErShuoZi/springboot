@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0c759a9c-6937-4473-93c4-622efb276183" name="Changes" comment="@Import注解注入组件">
+    <list default="true" id="0c759a9c-6937-4473-93c4-622efb276183" name="Changes" comment="@Conditional条件注入注解">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig03.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springboot/config/BeanConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +94,7 @@
       <option name="presentableId" value="Default" />
       <updated>1703727975102</updated>
       <workItem from="1703727976205" duration="15091000" />
-      <workItem from="1703746211148" duration="2768000" />
+      <workItem from="1703746211148" duration="3618000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1703740553666</created>
@@ -117,7 +117,14 @@
       <option name="project" value="LOCAL" />
       <updated>1703747787946</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="@Conditional条件注入注解">
+      <created>1703749067966</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703749067966</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -127,6 +134,7 @@
     <MESSAGE value="init" />
     <MESSAGE value="@Configuration注解" />
     <MESSAGE value="@Import注解注入组件" />
-    <option name="LAST_COMMIT_MESSAGE" value="@Import注解注入组件" />
+    <MESSAGE value="@Conditional条件注入注解" />
+    <option name="LAST_COMMIT_MESSAGE" value="@Conditional条件注入注解" />
   </component>
 </project>
