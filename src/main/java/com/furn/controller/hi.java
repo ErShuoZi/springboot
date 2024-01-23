@@ -1,15 +1,15 @@
-package com.springboot.controller;
+package com.furn.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+
 @Controller
-public class HelloController {
-    @RequestMapping("/hello")
+public class hi {
+    @RequestMapping("/hi")
     @ResponseBody
-    public String hello(){
-        return "hello ~";
+    public String hi() {
+        return "hi~";
     }
 }
