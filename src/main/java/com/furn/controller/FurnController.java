@@ -1,5 +1,7 @@
 package com.furn.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.furn.bean.Furn;
 import com.furn.service.FurnService;
@@ -7,6 +9,7 @@ import com.furn.util.Result;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
@@ -56,11 +59,26 @@ public class FurnController {
     }
 
 
-
     @PostMapping("/listFurnsByPage")
     public Result listFurnsByPage(@RequestParam(defaultValue = "1") Integer pageNum,
                                   @RequestParam(defaultValue = "5") Integer pageSize) {
         Page<Furn> page = furnService.page(new Page<>(pageNum, pageSize));
+        return Result.success(page);
+    }
+
+
+    @PostMapping("/listFurnsByConditionPage")
+    //带条件分页
+    public Result listFurnsByConditionPage(@RequestParam(defaultValue = "1") Integer pageNum,
+                                           @RequestParam(defaultValue = "5") Integer pageSize,
+                                           @RequestParam(defaultValue = "5") String search) {
+        //创建queryWrapper，可以将查询条件风撞到 Wrapper中
+        QueryWrapper<Furn> queryWrapper = Wrappers.query();
+        if (StringUtils.hasText(search)) {
+            //like 中的参数column 指的是数据库表中的字段名
+            queryWrapper.like("name", search);
+        }
+        Page<Furn> page = furnService.page(new Page<>(pageNum, pageSize), queryWrapper);
         return Result.success(page);
     }
 
